@@ -84,10 +84,52 @@ public class Homework06 {
         System.out.println("\n-------TASK-9-------\n");
         String[] objects = {"Pen", "notebook", "Book", "paper", "bag", "pencil", "Ruler"};
         System.out.println(Arrays.toString(objects));
+        int countUpperCh = 0;
+        int countLowerCh = 0;
+        int countBOrP = 0;
+        int countBookOrPen = 0;
 
+        for(String object : objects){
+            if (Character.isUpperCase(object.charAt(0))) countUpperCh++;
+            else countLowerCh++;
+            if (object.toLowerCase().startsWith("b") || object.toLowerCase().startsWith("p")) countBOrP++;
+            if (object.toLowerCase().contains("book") || object.toLowerCase().contains("pen")) countBookOrPen++;
+        }
+        System.out.println("Elements starts with uppercase = " + countUpperCh +
+                "\nElements starts with lowercase = " + countLowerCh +
+                "\nElements starting with B or P = " + countBOrP +
+                "\nElements having \"book\" or \"pen\" = " + countBookOrPen);
 
+        System.out.println("\n-------TASK-10-------\n");
+        int[] arrayForTask10 = {3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78};
+        System.out.println(Arrays.toString(arrayForTask10));
 
+        int countMore10 = 0;
+        int countLess10 = 0;
+        int countEqual10 = 0;
 
+        for (int numForTask10 : arrayForTask10){
+            if (numForTask10 == 10) countEqual10++;
+            else if (numForTask10 < 10) countLess10++;
+            else countMore10++;
+        }
+        System.out.println("Elements that are more than 10 = " + countMore10 +
+                "\nElements that are less than 10 = " + countLess10 +
+                "\nElements that are 10 = " + countEqual10);
+
+        System.out.println("\n-------TASK-11-------\n");
+        int[][] arrayForTask11 = {
+                {5, 8, 13, 1, 2},
+                {9, 3, 67, 1, 0}
+        };
+        System.out.println("1st array is = " + Arrays.toString(arrayForTask11[0]) +
+                "\n2nd array is = " + Arrays.toString(arrayForTask11[1]));
+
+        int[] thirdArray = new int[5];
+        for (int i = 0; i < thirdArray.length; i++){
+            thirdArray[i] = Math.max(arrayForTask11[0][i], arrayForTask11[1][i]);
+        }
+        System.out.println("3rd array is = " + Arrays.toString(thirdArray));
 
     }
 }
