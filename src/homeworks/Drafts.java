@@ -8,8 +8,6 @@ public class Drafts {
 
     public static void main(String[] args) {
         /*
-
-         */
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(3, 8, 34, 1, 6, 99));
@@ -54,6 +52,20 @@ public class Drafts {
             firstTerm = secondTerm;
             secondTerm = nextTerm;
         }
+
+         */
+        int[] numbers = {4, 0, -7, 5, 10, 45};
+
+        ArrayList<Integer> numds = new ArrayList<>();
+        for (int i = 0; i < numbers.length; i++){
+            for (int j = i + 1; j < numbers.length; j++) {
+
+                if (numbers[i] == numbers[j])
+                    numds.add(numbers[j]);
+            }
+        }
+        if (numds.size() > 0) System.out.println(numds.get(0));
+        else System.out.println("There is no duplicates");
 
 
 

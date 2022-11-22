@@ -32,7 +32,6 @@ public class Project06 {
             if (Pattern.matches("([\\w] [\\w])+", word)) counter++;
         }
         return counter;
-
     }
 
     public static ArrayList<Integer> removeNegatives(ArrayList<Integer> numbers){
