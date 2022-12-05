@@ -36,6 +36,7 @@ public class Project08 {
 
             }
         return closestDistance;
+
     }
 
     public static int findSingleNumber(int[] numbers) {
