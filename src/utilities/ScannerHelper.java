@@ -26,6 +26,14 @@ public class ScannerHelper {
 
         return age;
     }
+
+    public static int getANumber(){
+        System.out.println("Please enter a number");
+        int number = input.nextInt();
+        input.nextLine();
+
+        return number;
+    }
     /*
     Address
      */
