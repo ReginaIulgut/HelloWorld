@@ -16,6 +16,15 @@ public class Practice01_RemoveDuplicates {
     public static Integer[] removeDuplicates (Integer[] arr){
         return new LinkedHashSet<>(Arrays.asList(arr)).toArray(new Integer[0]);
         // Integer array -> Integer List -> LinkedHashSet -> Object array -> Integer array
+
+        /*
+        ArrayList<Integer> uniques = new ArrayList<>();
+    for (Integer i : arr) {
+        if(!uniques.contains(i)) uniques.add(i);
+    }
+
+    return uniques.toArray(new Integer[0]);
+         */
     }
 
 
