@@ -1,6 +1,7 @@
 package Collection;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class _01_List {
     public static void main(String[] args) {
@@ -17,15 +18,12 @@ public class _01_List {
         - The way they store the data
 
          */
-        ArrayList<String> fruits = new ArrayList<>();
+        LinkedList<String> fruits = new LinkedList<>();
 
         fruits.add("apple");
-        fruits.add("apple");
-        fruits.add("orange");
-        fruits.add("");
-        fruits.add("");
-        fruits.add(null);
-        fruits.add(null);
+        fruits.offer("orange");
+        fruits.offerFirst("pineapple");
+
 
         System.out.println(fruits);
     }
