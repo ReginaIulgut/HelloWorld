@@ -99,7 +99,7 @@ public class Homework12 {
         System.out.println(Arrays.toString(no13(numbers)));
 
         System.out.println("\n-------TASK-7-------\n");
-        int[] numbersForTask7 = {1,2,3,4};
+        int[] numbersForTask7 = {1,2,3,0};
         System.out.println(Arrays.toString(arrFactorial(numbersForTask7)));
 
         System.out.println("\n-------TASK-8-------\n");
