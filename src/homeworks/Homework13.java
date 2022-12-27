@@ -112,5 +112,6 @@ public class Homework13 {
         // System.out.println(removeAndReturnCommons(listTask08, listTask8));
 
         System.out.println("\n-------TASK-9-------");
+
     }
 }
