@@ -23,6 +23,14 @@ public class Homework13 {
     }
 
     // TASK-3
+    public static int[][] numberAndSquare(int[] numbers){
+        int[][] numbersSquare = new int[numbers.length][2];
+        for(int i = 0; i < numbers.length; i++){
+            numbersSquare[i][0] = numbers[i];
+            numbersSquare[i][1] = numbers[i] * numbers[i];
+        }
+        return numbersSquare;
+    }
 
     // TASK-4
     public static boolean containsValue (String[] strings, String str){
@@ -56,21 +64,17 @@ public class Homework13 {
 
     // TASK-7
     public static String[] removeArraySpecialDigits(String[] arr){
-        String[] newArr = new String[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            for(int j = 0; i < arr[i].length(); i++){
-                if (Character.isLetter(arr[i].charAt(j)) || arr[i].charAt(j) == ' ')
-                    newArr[i] += arr[i].charAt(j);
-            }
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = arr[i].replaceAll("[^A-Za-z]", "");
         }
-        return newArr;
+        return arr;
     }
 
     // TASK-8
     public static ArrayList<String> removeAndReturnCommons(ArrayList<String> str1, ArrayList<String> str2){
         ArrayList<String> newStringArrayList = new ArrayList<>();
         for(int i = 0; i < str1.size(); i++){
-            for (int j = 1; j < str2.size(); j++) {
+            for (int j = 0; j < str2.size(); j++) {
                 if (str1.get(i).equals(str2.get(j)) && !newStringArrayList.contains(str2.get(j)))
                     newStringArrayList.add(str2.get(j));
             }
@@ -79,6 +83,13 @@ public class Homework13 {
     }
 
     // TASK-9
+    public static ArrayList<String> noXInVariables(ArrayList<String> list){
+        for(int i = 0; i < list.size(); i++){
+            list.set(i, list.get(i).replaceAll("[Xx]+", ""));
+        }
+        list.removeIf(x -> x.equals(""));
+        return list;
+    }
 
 
     public static void main(String[] args){
@@ -91,27 +102,29 @@ public class Homework13 {
         System.out.println(noZero(numbers));
 
         System.out.println("\n-------TASK-3-------");
+        int[] numbersForTask3 = {0,3,6};
+        System.out.println(Arrays.deepToString(numberAndSquare(numbersForTask3)));
 
         System.out.println("\n-------TASK-4-------");
         String[] arrForTask4 = {"abc", "def", "123"};
         System.out.println(containsValue(arrForTask4, "123"));
 
         System.out.println("\n-------TASK-5-------");
-        System.out.println(reverseSentence("This"));
+        System.out.println(reverseSentence("This is fun"));
 
         System.out.println("\n-------TASK-6-------");
         System.out.println(removeStringSpecialDigits("123Java *&^%is fun"));
 
         System.out.println("\n-------TASK-7-------");
         String[] arrForTask7 = {"123Java", "Selenium", "^&%$#"};
-        // System.out.println(Arrays.toString(removeArraySpecialDigits(arrForTask7)));
+        System.out.println(Arrays.toString(removeArraySpecialDigits(arrForTask7)));
 
         System.out.println("\n-------TASK-8-------");
         ArrayList<String> listTask8 = new ArrayList<>(Arrays.asList("Java", "is", "fun", "a lot"));
         ArrayList<String> listTask08 = new ArrayList<>(Arrays.asList("abc", "xyz", "123", "Java"));
-        // System.out.println(removeAndReturnCommons(listTask08, listTask8));
+        System.out.println(removeAndReturnCommons(listTask08, listTask8));
 
         System.out.println("\n-------TASK-9-------");
-
+        System.out.println(noXInVariables(new ArrayList<>(Arrays.asList("xyXyxy", "Xx", "ABC"))));
     }
 }
