@@ -3,6 +3,7 @@ package arrays;
 import java.util.Arrays;
 
 public class _02intArray {
+
     public static void main(String[] args) {
         // 1. Create an int array
         int [] numbers = {0, -5, 2, 10, 5, 2, -1, 0};
